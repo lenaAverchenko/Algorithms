@@ -1,0 +1,13 @@
+START
+SET array := {3, 6, 4, 7, 2, 1, 9}
+INPUT numberToSearch
+FOR i in range (array.length, 0):
+	IF array[i] = numberToSearch:
+	   PRINT i
+	   ENDFOR
+	ELSE 
+	   DECREMENT i
+	ENDIF   
+ENDFOR
+ 	   
+

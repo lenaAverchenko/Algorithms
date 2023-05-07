@@ -1,0 +1,11 @@
+START
+SET array := {3, 6, 4, 7, 2, 1, 9}
+SET result := 0
+FOR i in range (0, array.length):
+	result := result + array[i]*array[i]
+	INCREMENT i
+ENDFOR
+PRINT result
+END
+
+ 	   
