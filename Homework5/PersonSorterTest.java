@@ -17,20 +17,20 @@ public class PersonSorterTest {
 
     }
 
-    public static void sortAndMerge(Person[] people){
+    public static void sortAndMerge(Person[] people) {
         int size = people.length;
-        if (size == 1){
+        if (size == 1) {
             return;
         }
 
-        int midMarker = size/2;
+        int midMarker = size / 2;
         Person[] leftPeople = new Person[midMarker];
         Person[] rightPeople = new Person[size - midMarker];
 
         for (int i = 0; i < midMarker; i++) {
             leftPeople[i] = people[i];
         }
-        for (int i = 0; i < rightPeople.length; i++){
+        for (int i = 0; i < rightPeople.length; i++) {
             rightPeople[i] = people[midMarker + i];
         }
 
@@ -47,27 +47,26 @@ public class PersonSorterTest {
         int leftPeopleSize = leftPeople.length;
         int rightPeopleSize = rightPeople.length;
 
-        while(leftIdx < leftPeopleSize && rightIdx < rightPeopleSize){
-            if (leftPeople[leftIdx].getAge() < rightPeople[rightIdx].getAge()){
+        while (leftIdx < leftPeopleSize && rightIdx < rightPeopleSize) {
+            if (leftPeople[leftIdx].getAge() < rightPeople[rightIdx].getAge()) {
                 people[peopleIdx] = rightPeople[rightIdx];
-                peopleIdx ++;
-                rightIdx ++;
-            } else{
+                peopleIdx++;
+                rightIdx++;
+            } else {
                 people[peopleIdx] = leftPeople[leftIdx];
-                peopleIdx ++;
-                leftIdx ++;
+                peopleIdx++;
+                leftIdx++;
             }
         }
-        while (leftIdx < leftPeopleSize){
+        while (leftIdx < leftPeopleSize) {
             people[peopleIdx] = leftPeople[leftIdx];
-            peopleIdx ++;
-            leftIdx ++;
+            peopleIdx++;
+            leftIdx++;
         }
-        while (rightIdx < rightPeopleSize){
+        while (rightIdx < rightPeopleSize) {
             people[peopleIdx] = rightPeople[rightIdx];
-            peopleIdx ++;
-            rightIdx ++;
+            peopleIdx++;
+            rightIdx++;
         }
-
     }
 }

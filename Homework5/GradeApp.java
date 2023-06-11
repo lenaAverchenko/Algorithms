@@ -29,8 +29,8 @@ public class GradeApp {
         for (int i = 0; i < middle; i++) {
             leftNumbers[i] = numbers[i];
         }
-        for (int i = 0; i < size-middle; i++) {
-            rightNumbers[i] = numbers[i+middle];
+        for (int i = 0; i < size - middle; i++) {
+            rightNumbers[i] = numbers[i + middle];
         }
         divideSortAndMerge(leftNumbers);
         divideSortAndMerge(rightNumbers);
@@ -59,12 +59,12 @@ public class GradeApp {
 
             }
         }
-        while (leftArrayIndex < leftSize){
+        while (leftArrayIndex < leftSize) {
             array[mainArrayIndex] = leftArray[leftArrayIndex];
             mainArrayIndex++;
             leftArrayIndex++;
         }
-        while (rightArrayIndex < rightSize){
+        while (rightArrayIndex < rightSize) {
             array[mainArrayIndex] = rightArray[rightArrayIndex];
             rightArrayIndex++;
             mainArrayIndex++;
