@@ -1,5 +1,8 @@
 package algorithms.homework8;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class RsaKey {
 
     //public key
@@ -29,4 +32,12 @@ public class RsaKey {
      * 9i3EJ1fBt6m6xJ0DtVuL+l5GqgFnxHhIwTp7jd4WytyK097ll/GTtKin+ZlF9dVXCK7HW/tAAdj37svfnXn1hr8nWyxH0dIR206JmM/I+WWAde
      * NfgG0= Пользователь@DESKTOP-K42RMN2
      * */
+
+    public static void main(String[] args) {
+        int[] a = {3,1,7,9,9,5};
+        Arrays.sort(a);
+        for (int i = a.length-1; i >=0 ; i--) {
+            System.out.print(a[i]);
+        }
+    }
 }
